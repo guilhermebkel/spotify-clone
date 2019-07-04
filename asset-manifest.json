@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fake-Spotify/static/css/main.34de6062.chunk.css",
+    "main.js": "/Fake-Spotify/static/js/main.6305d5dd.chunk.js",
+    "main.js.map": "/Fake-Spotify/static/js/main.6305d5dd.chunk.js.map",
+    "runtime~main.js": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js",
+    "runtime~main.js.map": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js.map",
+    "static/js/2.90bc80fd.chunk.js": "/Fake-Spotify/static/js/2.90bc80fd.chunk.js",
+    "static/js/2.90bc80fd.chunk.js.map": "/Fake-Spotify/static/js/2.90bc80fd.chunk.js.map",
+    "index.html": "/Fake-Spotify/index.html",
+    "precache-manifest.055958a16afd3bd4e5d65a68def3bcf6.js": "/Fake-Spotify/precache-manifest.055958a16afd3bd4e5d65a68def3bcf6.js",
+    "service-worker.js": "/Fake-Spotify/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/Fake-Spotify/static/css/main.34de6062.chunk.css.map"
+  }
+}
