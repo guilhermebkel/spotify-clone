@@ -13,7 +13,7 @@ export default class Login extends Component{
     }
 
     componentDidMount(){
-        //this.connectServer()
+        this.connectServer()
     }
 
     async connectServer(){
