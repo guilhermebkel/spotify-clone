@@ -11,4 +11,5 @@ async function setup(){
     })
     app.get('/', (req, res) => res.json({"status": "Use /login to log into your spotify account!"}))
     require('./routes').config(app)
+    require('./middlewares').config(app)
 }
