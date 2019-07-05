@@ -5,11 +5,15 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
+    "express": "^4.17.1",
     "gh-pages": "^2.0.1",
+    "nodemon": "^1.19.1",
+    "query-string": "^6.8.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "webpack": "4.29.6"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development react-scripts build",
@@ -18,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "server": "nodemon src/api/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
