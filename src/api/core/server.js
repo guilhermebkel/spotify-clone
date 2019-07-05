@@ -6,7 +6,7 @@ module.exports = {
 }
 
 async function setup(){
-    app.listen(process.env.SERVER_PORT, () => {
+    app.listen(process.env.SERVER_PORT || process.env.PORT, () => {
         console.log(`- Server running at port [${process.env.SERVER_PORT}]`)
     })
     app.get('/', (req, res) => res.json({"status": "Use /login to log into your spotify account!"}))
