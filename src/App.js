@@ -1,5 +1,4 @@
 import React from 'react';
-const { auth } = require('./api/middlewares/auth')
 
 class App extends React.Component{
   constructor(props){
@@ -7,7 +6,7 @@ class App extends React.Component{
     this.state = {}
   }
   componentDidMount(){
-    auth()
+    
   }
 
   render(){

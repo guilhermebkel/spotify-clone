@@ -1,5 +1,5 @@
 const querystring = require('querystring')
-require('dotenv').config()
+const request = require('request')
 
 module.exports = {
     login,
@@ -12,7 +12,7 @@ async function login(req, res){
             response_type: 'code',
             client_id: process.env.CLIENT_ID,
             scope: 'user-read-private user-read-email',
-            redirect_uri: process.env.PUBLIC_URL + 'callback'
+            redirect_uri: process.env.SERVER_URL + 'callback'
         }))
 }
 
@@ -22,8 +22,20 @@ async function callback(req, res){
         url: 'https://accounts.spotify.com/api/token',
         form: {
             code,
-            redirect_uri: process.env.PUBLIC_URL + 'callback',
+            redirect_uri: process.env.SERVER_URL + 'callback',
             grant_type: 'authorization_code'
+        },
+        headers: {
+            'Authorization': 'Basic ' + (new Buffer(
+              process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET
+            ).toString('base64'))
+          },
+          json: true
         }
+        
+        request.post(authOptions, function(error, response, body) {
+          var access_token = body.access_token
+          let uri = process.env.PUBLIC_URL
+          res.redirect(uri + '?access_token=' + access_token)
+        })
     }
-}

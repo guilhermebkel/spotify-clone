@@ -13,6 +13,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "request": "^2.88.0",
     "webpack": "4.29.6"
   },
   "scripts": {
@@ -23,7 +24,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "server": "nodemon src/api/index.js"
+    "server": "nodemon src/api/index.js",
+    "api": "node src/api/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
