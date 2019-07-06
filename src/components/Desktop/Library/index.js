@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Table } from 'antd'
-import moment from 'moment'
+//import { Table } from 'antd'
+//import moment from 'moment'
 
 import './style.css'
 
-const columns = [
+/*const columns = [
     {
         title: '',
         dataIndex: 'name',
@@ -27,7 +27,7 @@ const columns = [
         key: 'added_at',
         render: date => <span>{moment(date).format("YYYY-MM-DD")}</span>
     },
-];
+];*/
 
 const Library = ({ state, dispatch }) => (
     <div className="library">
