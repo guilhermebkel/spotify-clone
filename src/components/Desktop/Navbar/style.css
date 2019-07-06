@@ -13,29 +13,47 @@
     border-radius: 100%;
 }
 .name {
+    margin: auto 20px auto 0px;
     color: white;
     font-size: 15px;
+}
+.name:hover {
+    color: white;
+    border-bottom: solid 1px white;
     margin-right: 20px;
+    cursor: default;
 }
 .arrow-down {
     width: 20px; 
     margin: auto 20px auto 0px;
+    outline: none;
 }
 
 .cascade {
-    background-color: #2f2f2f;
-    width: 180px;
-    height: auto;
-    box-shadow: 0px 7px 10px rgb(19, 19, 19);
+    background-color: #2f2f2f !important;
+    width: auto !important;
+    height: 65px !important;
+    box-shadow: 0px 7px 10px rgb(19, 19, 19) !important;
 }
 
 .cascade ul {
-    color: rgb(182, 182, 182);
-    cursor: pointer;
-    list-style-type: none;
+    color: rgb(182, 182, 182) !important;
+    cursor: pointer !important;
+    list-style-type: none !important;
 }
 
 .cascade ul li {
-    padding: 5px 0;
-    font-size: 15px;
+    padding: 5px 15px !important;
+    font-size: 14px !important;
+}
+.cascade ul li:hover{
+    background-color: #494949;
+    color: white;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.search-bar {
+    width: 200px;
+    margin: auto auto auto 20px;
 }
