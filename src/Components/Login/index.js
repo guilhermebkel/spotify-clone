@@ -8,28 +8,37 @@ export default class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
-
+            buttonClass: "button",
+            buttonText: "Login",
+            loading: {}
         }
     }
 
-    componentDidMount(){
-        this.connectServer()
+    async componentDidMount(){
+        this.setState({
+            buttonClass: "button-loading", 
+            buttonText: "Connecting to server...",
+            loading: {animation: "loading 2s infinite", pointerEvents: "none"}
+        })
+        await this.connectServer()
+        this.setState({
+            buttonClass: "button", 
+            buttonText: "Login", 
+            loading: {}
+        })
     }
 
     async connectServer(){
-        const API = 'https://spotify-api-server.herokuapp.com/'
+        const API = process.env.SERVER_URL || 'http://localhost:5000/'
         await fetch(API)
         .then((result) => {
-            console.log(result)
+            console.log(result.status) 
         })
     }
 
     async login(){
-        const API = 'https://spotify-api-server.herokuapp.com/login'
-        await fetch(API)
-        .then((result) => {
-            console.log(result)
-        })
+        const API = process.env.SERVER_URL ? process.env.SERVER_URL + 'login' : 'http://localhost:5000/login'
+        window.open(API,"_self");
     }
 
     render(){
@@ -37,7 +46,8 @@ export default class Login extends Component{
             <>
                 <div className="container">
                     <img alt="Spotify" src={Spotify} />
-                    <button>Login</button>
+                    <button onClick={this.login} style={this.state.loading} 
+                    className={this.state.buttonClass}>{this.state.buttonText}</button>
                 </div> 
 
                 <Particles
