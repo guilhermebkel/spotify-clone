@@ -12,7 +12,7 @@ async function login(req, res){
         querystring.stringify({
             response_type: 'code',
             client_id: process.env.CLIENT_ID,
-            scope: 'user-read-private user-read-email',
+            scope: 'user-read-private user-read-email user-library-read',
             redirect_uri: process.env.SERVER_URL + 'callback'
         }))
 }

@@ -5,7 +5,7 @@ import Sidebar from '../../components/Desktop/Sidebar'
 import Dashboard from '../../components/Desktop/Dashboard'
 import Player from '../../components/Desktop/Player'
 
-import { getUserData, getUserPlaylists } from '../../services/spotify'
+import { getUserData, getUserPlaylists, getUserTracks } from '../../services/spotify'
 
 import './style.css'
 
@@ -20,11 +20,13 @@ class Desktop extends Component{
     async componentDidMount(){
         const userData = await getUserData(this.state.token)
         const userPlaylists = await getUserPlaylists(this.state.token)
+        const userTracks = await getUserTracks(this.state.token)
 
         const data = {
             name: userData.display_name,
             avatar_url: userData.images[0].url,
-            playlists: userPlaylists.items
+            playlists: userPlaylists.items,
+            tracks: userTracks.items
         }
 
         function changeState(data){
