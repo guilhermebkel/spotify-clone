@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from '../Navbar/index'
 
 import './style.css'
 
@@ -11,9 +12,11 @@ export default class Dashboard extends Component{
 
     render(){
         return (
-            <div>
-                
-            </div>
+            <>
+                <div style={{width: "100%", backgroundColor: "red", height: "100%"}}>
+                    <Navbar />    
+                </div>
+            </>
         )
     }
 }

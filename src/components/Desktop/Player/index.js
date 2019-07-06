@@ -11,7 +11,7 @@ export default class Player extends Component{
 
     render(){
         return (
-            <div>
+            <div style={{height: "100%", width: "100vw", backgroundColor: "green"}}>
                 
             </div>
         )

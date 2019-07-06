@@ -18,9 +18,13 @@ export default class Desktop extends Component{
     render(){
         return (
             <>
-                <Sidebar />
-                <Dashboard />
-                <Player />
+                <div style={{display: "grid", gridTemplateColumns: "15vw 85vw", height: "87vh"}}>
+                    <Sidebar />
+                    <Dashboard />
+                </div>
+                <div style={{height: "13vh"}}>
+                    <Player />
+                </div>
             </>
         )
     }
