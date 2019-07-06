@@ -1,18 +1,40 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Sidebar from '../../components/Desktop/Sidebar'
 import Dashboard from '../../components/Desktop/Dashboard'
 import Player from '../../components/Desktop/Player'
 
+import { getUserData, getUserPlaylists } from '../../services/spotify'
+
 import './style.css'
 
-export default class Desktop extends Component{
+class Desktop extends Component{
     constructor(props){
         super(props)
         this.state = {
             token: props.match.params.token,
-            isLoading: true
         }
+    }
+    
+    async componentDidMount(){
+        const userData = await getUserData(this.state.token)
+        const userPlaylists = await getUserPlaylists(this.state.token)
+
+        const data = {
+            name: userData.display_name,
+            avatar_url: userData.images[0].url,
+            playlists: userPlaylists.items
+        }
+
+        function changeState(data){
+            return {
+                type: 'GET_INITIAL_DATA',
+                data
+            }
+        }
+
+        this.props.dispatch(changeState(data))
     }
 
     render(){
@@ -29,3 +51,5 @@ export default class Desktop extends Component{
         )
     }
 }
+
+export default connect(state => ({ state }))(Desktop)
