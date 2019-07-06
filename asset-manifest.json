@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Fake-Spotify/static/css/main.c34a88a1.chunk.css",
-    "main.js": "/Fake-Spotify/static/js/main.e999c128.chunk.js",
-    "main.js.map": "/Fake-Spotify/static/js/main.e999c128.chunk.js.map",
+    "main.js": "/Fake-Spotify/static/js/main.70a01c00.chunk.js",
+    "main.js.map": "/Fake-Spotify/static/js/main.70a01c00.chunk.js.map",
     "runtime~main.js": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js",
     "runtime~main.js.map": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js.map",
     "static/js/2.38be12ed.chunk.js": "/Fake-Spotify/static/js/2.38be12ed.chunk.js",
     "static/js/2.38be12ed.chunk.js.map": "/Fake-Spotify/static/js/2.38be12ed.chunk.js.map",
     "index.html": "/Fake-Spotify/index.html",
-    "precache-manifest.e279cc8c0bc688e0acd7547af0b8843d.js": "/Fake-Spotify/precache-manifest.e279cc8c0bc688e0acd7547af0b8843d.js",
+    "precache-manifest.f781b01b5123985e5c01ee24b2682aab.js": "/Fake-Spotify/precache-manifest.f781b01b5123985e5c01ee24b2682aab.js",
     "service-worker.js": "/Fake-Spotify/service-worker.js",
     "static/css/main.c34a88a1.chunk.css.map": "/Fake-Spotify/static/css/main.c34a88a1.chunk.css.map"
   }
