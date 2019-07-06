@@ -14,8 +14,8 @@ class App extends React.Component{
   render(){
     return(
       <Switch>
-        <Route path="/desktop" component={Desktop} />
-        <Route path="/mobile" component={Mobile} />
+        <Route path="/desktop/:token" component={Desktop} />
+        <Route path="/mobile/:token" component={Mobile} />
         <Route exact path="" component={Login} />
       </Switch>
     )
