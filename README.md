@@ -9,7 +9,7 @@ NODE_ENV=development
 CLIENT_ID=
 CLIENT_SECRET=
 PORT=3000
-PUBLIC_URL=http://localhost:3000/
+CLIENT_URL=http://localhost:3000/
 SERVER_URL=http://localhost:5000/
 SERVER_PORT=5000
 ```
