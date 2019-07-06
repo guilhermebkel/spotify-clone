@@ -69,6 +69,40 @@ body {
     100% { box-shadow: 0 0px 50px rgba(223, 1, 1, 0.1) }
 }
 
+.button-connect {
+    margin: 50px auto auto auto;
+    width: 120px;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    color: #191919;
+    outline: none;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+@keyframes connecting {
+    0% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.1) }
+    10% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.3) }
+    20% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.5) }
+    30% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.7) }
+    40% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.9) }
+    50% { box-shadow: 0 0px 50px rgba(255, 255, 255, 1) }
+    60% { box-shadow: 0 0px 50px rgba(255, 255, 255, 1) }
+    30% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.9) }
+    70% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.7) }
+    80% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.5) }
+    90% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.3) }
+    100% { box-shadow: 0 0px 50px rgba(255, 255, 255, 0.1) }
+}
+
 button:hover {
     background-color: white;
     color: #191919;
