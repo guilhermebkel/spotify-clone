@@ -30,13 +30,11 @@ const columns = [
 ];
 
 const Library = ({ state, dispatch }) => (
-    <>
+    <div className="library">
         <h1 className="title">Songs</h1>
         <button className="play-button">PLAY</button>
-        <Table dataSource={state.tracks.map(song => song)} columns={columns} />
-        {console.log(state.tracks)}
-    </>
-
+        {/*<Table dataSource={state.tracks.map(song => song)} columns={columns} className="table"/>*/}
+    </div>
 )
 
 export default connect(state => ({ state }))(Library)

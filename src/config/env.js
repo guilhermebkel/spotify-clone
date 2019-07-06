@@ -10,7 +10,7 @@ const LOCAL_DESKTOP = '/desktop/:token'
 const ONLINE_MOBILE = '/Fake-Spotify/mobile/:token'
 const LOCAL_MOBILE = '/mobile/:token'
 
-const ONLINE_PUBLIC = '/'
+const ONLINE_PUBLIC = ''
 const LOCAL_PUBLIC = ''
 
 export const SERVER_URL = process.env.NODE_ENV === 'development' ? LOCAL_SERVER : ONLINE_SERVER
