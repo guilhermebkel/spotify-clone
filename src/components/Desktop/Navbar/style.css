@@ -1,0 +1,41 @@
+.navbar {
+    width: 85vw;
+    background-color: transparent;
+    height: 50px;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    z-index: 5;
+}
+.avatar {
+    width: 30px; 
+    margin: auto 10px auto auto;
+    border-radius: 100%;
+}
+.name {
+    color: white;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.arrow-down {
+    width: 20px; 
+    margin: auto 20px auto 0px;
+}
+
+.cascade {
+    background-color: #2f2f2f;
+    width: 180px;
+    height: auto;
+    box-shadow: 0px 7px 10px rgb(19, 19, 19);
+}
+
+.cascade ul {
+    color: rgb(182, 182, 182);
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.cascade ul li {
+    padding: 5px 0;
+    font-size: 15px;
+}
