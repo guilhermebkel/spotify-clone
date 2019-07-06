@@ -19,8 +19,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: dev
-          command: npm run dev
+          name: build
+          command: npm run build
       - store_artifacts:
           path: test-results.xml
           prefix: tests

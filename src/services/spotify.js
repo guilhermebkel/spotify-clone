@@ -1,10 +1,4 @@
-module.exports = {
-    getUserData,
-    getUserTracks,
-    getUserPlaylists
-}
-
-async function getUserData(token){
+export async function getUserData(token){
     const userData = await fetch('https://api.spotify.com/v1/me', {
                             headers: {'Authorization': 'Bearer ' + token}
                         })
@@ -14,7 +8,7 @@ async function getUserData(token){
     return userData
 }
 
-async function getUserTracks(token){
+export async function getUserTracks(token){
     const userTracks = await fetch('https://api.spotify.com/v1/me/tracks', {
                             headers: {'Authorization': 'Bearer ' + token}
                         })
@@ -24,7 +18,7 @@ async function getUserTracks(token){
     return userTracks
 }
 
-async function getUserPlaylists(token){
+export async function getUserPlaylists(token){
     const userPlaylists = await fetch('https://api.spotify.com/v1/me/playlists', {
                             headers: {'Authorization': 'Bearer ' + token}
                         })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
-import { ONLINE_SERVER, LOCAL_SERVER } from '../../config/env'
+import { SERVER_URL } from '../../config/env'
 
 import './style.css'
 import Spotify from '../../assets/spotify.png'
@@ -19,7 +19,7 @@ export default class Login extends Component{
     }
 
     async componentDidMount(){
-        const server_url = process.env.NODE_ENV === 'development' ? LOCAL_SERVER : ONLINE_SERVER
+        const server_url = SERVER_URL
         this.setState({
             server_url,
             buttonClass: "button-loading", 
