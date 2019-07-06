@@ -17,7 +17,7 @@ export default class Login extends Component{
     }
 
     async connectServer(){
-        const API = 'https://spotify-api-server.herokuapp.com/'
+        const API = 'http://localhost:5000/'
         await fetch(API)
         .then((result) => {
             console.log(result)
@@ -25,7 +25,7 @@ export default class Login extends Component{
     }
 
     async login(){
-        const API = 'https://spotify-api-server.herokuapp.com/login'
+        const API = 'http://localhost:5000/login'
         await fetch(API)
         .then((result) => {
             console.log(result)
@@ -37,7 +37,7 @@ export default class Login extends Component{
             <>
                 <div className="container">
                     <img alt="Spotify" src={Spotify} />
-                    <button>Login</button>
+                    <button onClick={this.login}>Login</button>
                 </div> 
 
                 <Particles
