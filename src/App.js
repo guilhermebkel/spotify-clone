@@ -8,6 +8,8 @@ import Mobile from './pages/Mobile'
 import { Provider } from 'react-redux'
 import store from './store'
 
+import { LOGIN_URL, DESKTOP_URL, MOBILE_URL } from './config/env'
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -18,9 +20,9 @@ class App extends React.Component{
     return(
       <Switch>
         <Provider store={store}>
-          <Route path="/desktop/:token" component={Desktop} />
-          <Route path="/mobile/:token" component={Mobile} />
-          <Route exact path="" component={Login} />
+          <Route path={DESKTOP_URL} component={Desktop} />
+          <Route path={MOBILE_URL} component={Mobile} />
+          <Route exact path={LOGIN_URL} component={Login} />
         </Provider>
       </Switch>
     )
