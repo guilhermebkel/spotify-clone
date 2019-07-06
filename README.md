@@ -17,4 +17,5 @@ SERVER_PORT=5000
 ```sh
 ONLINE_SERVER =
 LOCAL_SERVER = 'http://localhost:5000/'
+NODE_ENV = 'production'
 ```
