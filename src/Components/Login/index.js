@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
+import { ONLINE_SERVER, LOCAL_SERVER } from '../../config/env'
 
 import './style.css'
 import Spotify from '../../assets/spotify.png'
@@ -8,14 +9,19 @@ export default class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
+            server_url: "",
             buttonClass: "button",
             buttonText: "Login",
             loading: {}
         }
+        this.login = this.login.bind(this)
+        this.connectServer = this.connectServer.bind(this)
     }
 
     async componentDidMount(){
+        const server_url = process.env.NODE_ENV === 'development' ? LOCAL_SERVER : ONLINE_SERVER
         this.setState({
+            server_url,
             buttonClass: "button-loading", 
             buttonText: "Connecting to server...",
             loading: {animation: "loading 2s infinite", pointerEvents: "none"}
@@ -29,7 +35,7 @@ export default class Login extends Component{
     }
 
     async connectServer(){
-        const API = process.env.SERVER_URL || 'http://localhost:5000/'
+        const API = this.state.server_url
         await fetch(API)
         .then((result) => {
             console.log(result.status) 
@@ -37,7 +43,7 @@ export default class Login extends Component{
     }
 
     async login(){
-        const API = process.env.SERVER_URL ? process.env.SERVER_URL + 'login' : 'http://localhost:5000/login'
+        const API = this.state.server_url + 'login' 
         window.open(API,"_self");
     }
 
