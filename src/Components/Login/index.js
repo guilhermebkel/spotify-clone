@@ -29,7 +29,7 @@ export default class Login extends Component{
     }
 
     async connectServer(){
-        const API = 'http://localhost:5000/'
+        const API = process.env.SERVER_URL || 'http://localhost:5000/'
         await fetch(API)
         .then((result) => {
             console.log(result.status) 
@@ -37,11 +37,8 @@ export default class Login extends Component{
     }
 
     async login(){
-        const API = 'http://localhost:5000/login'
-        await fetch(API)
-        .then((result) => {
-            console.log(result)
-        })
+        const API = process.env.SERVER_URL ? process.env.SERVER_URL + 'login' : 'http://localhost:5000/login'
+        window.open(API,"_self");
     }
 
     render(){
