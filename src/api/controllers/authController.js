@@ -1,5 +1,6 @@
 const querystring = require('querystring')
 const request = require('request')
+const MobileDetect = require('mobile-detect')
 
 module.exports = {
     login,
@@ -32,10 +33,16 @@ async function callback(req, res){
           },
           json: true
         }
-        
+
+        const userAgent = req.headers["user-agent"]
+        let deviceRecognition = (
+          new MobileDetect(userAgent)
+        )
+        const device = deviceRecognition.mobile() ? 'mobile/' : 'desktop/'
+
         request.post(authOptions, function(error, response, body) {
           var access_token = body.access_token
           let uri = process.env.CLIENT_URL
-          res.redirect(uri + '?access_token=' + access_token)
+          res.redirect(uri + device + '?access_token=' + access_token)
         })
     }

@@ -8,6 +8,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "gh-pages": "^2.0.1",
+    "mobile-detect": "^1.4.3",
     "nodemon": "^1.19.1",
     "query-string": "^6.8.1",
     "react": "^16.8.6",
