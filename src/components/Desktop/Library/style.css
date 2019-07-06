@@ -20,6 +20,7 @@
     height: 35px;
     width: 110px;
     border-radius: 30px;
+    margin-bottom: 20px;
 }
 .play-button:hover {
     background-color: rgb(24, 214, 94);
@@ -28,13 +29,18 @@
 }
 
 .table{
-    margin-top: 20px;
+    border-color: transparent !important;
+}
+.row:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.column{
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 .columnTitle{
     font-size: 13px; 
     color: #b6b6b6;
     cursor: default;
-    padding: 2px 20px;
 }
 .columnTitle:hover{
     color: white;

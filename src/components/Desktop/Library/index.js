@@ -12,7 +12,8 @@ const columns = [
         title: '',
         dataIndex: 'track',
         key: 'play',
-        render: track => <img alt="play" src={PlayButton} className="play-music" onClick={() => this.play(track)}></img>
+        render: track => <img alt="play" src={PlayButton} className="play-music" onClick={() => this.play(track)}></img>,
+        className: "column",
     },
     {
         title: () => <span className="columnTitle">TITLE</span>,
@@ -20,22 +21,24 @@ const columns = [
         key: 'title',
         isSortColumn: true,
         render: title => <span className="columnData">{title}</span>,
-        className: "table"
+        className: "column",
     },
     {
         title: () => <span className="columnTitle">ARTIST</span>,
         dataIndex: 'track.artists',
         key: 'artist',
         render: artists => {
-            const artist = [...artists.map(artist => artist.name)]
+            const artist = [...artists.map(artist => artist.name + ' ')]
             return (<span className="columnData">{artist}</span>)
-        }
+        },
+        className: "column",
     },
     {
         title: () => <img alt="calendar" src={Calendar} className="calendar"></img>,
         dataIndex: 'added_at',
         key: 'added_at',
-        render: date => <span className="columnData">{moment(date).format("YYYY-MM-DD")}</span>
+        render: date => <span className="columnData">{moment(date).format("YYYY-MM-DD")}</span>,
+        className: "column",
     },
 ];
 
@@ -44,7 +47,7 @@ const Library = ({ state, dispatch }) => (
         <h1 className="title">Songs</h1>
         <button className="play-button">PLAY</button>
         <Table dataSource={state.tracks.map(song => song)} columns={columns} 
-        className="table" size="small" bordered={false}/>
+        size="small" bordered={false} rowClassName="row"/>
     </div>
 )
 
