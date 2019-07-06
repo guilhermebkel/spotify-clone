@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.442ffa4f.chunk.css",
-    "main.js": "http://localhost:3000/static/js/main.43df25ed.chunk.js",
-    "main.js.map": "http://localhost:3000/static/js/main.43df25ed.chunk.js.map",
-    "runtime~main.js": "http://localhost:3000/static/js/runtime~main.8a6cbfe7.js",
-    "runtime~main.js.map": "http://localhost:3000/static/js/runtime~main.8a6cbfe7.js.map",
-    "static/js/2.96dc0260.chunk.js": "http://localhost:3000/static/js/2.96dc0260.chunk.js",
-    "static/js/2.96dc0260.chunk.js.map": "http://localhost:3000/static/js/2.96dc0260.chunk.js.map",
-    "index.html": "http://localhost:3000/index.html",
-    "precache-manifest.dd1fc92c960b255053f3fa4d84c1902c.js": "http://localhost:3000/precache-manifest.dd1fc92c960b255053f3fa4d84c1902c.js",
-    "service-worker.js": "http://localhost:3000/service-worker.js",
-    "static/css/main.442ffa4f.chunk.css.map": "http://localhost:3000/static/css/main.442ffa4f.chunk.css.map"
+    "main.css": "/Fake-Spotify/static/css/main.442ffa4f.chunk.css",
+    "main.js": "/Fake-Spotify/static/js/main.da8227f2.chunk.js",
+    "main.js.map": "/Fake-Spotify/static/js/main.da8227f2.chunk.js.map",
+    "runtime~main.js": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js",
+    "runtime~main.js.map": "/Fake-Spotify/static/js/runtime~main.c39fbf9c.js.map",
+    "static/js/2.96dc0260.chunk.js": "/Fake-Spotify/static/js/2.96dc0260.chunk.js",
+    "static/js/2.96dc0260.chunk.js.map": "/Fake-Spotify/static/js/2.96dc0260.chunk.js.map",
+    "index.html": "/Fake-Spotify/index.html",
+    "precache-manifest.b7a4449d072c856763563776cc123112.js": "/Fake-Spotify/precache-manifest.b7a4449d072c856763563776cc123112.js",
+    "service-worker.js": "/Fake-Spotify/service-worker.js",
+    "static/css/main.442ffa4f.chunk.css.map": "/Fake-Spotify/static/css/main.442ffa4f.chunk.css.map"
   }
 }
