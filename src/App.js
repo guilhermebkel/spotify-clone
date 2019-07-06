@@ -1,7 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
-import Login from './Components/Login'
+import Login from './pages/Login'
+import Desktop from './pages/Desktop'
+import Mobile from './pages/Mobile'
 
 class App extends React.Component{
   constructor(props){
@@ -11,9 +13,11 @@ class App extends React.Component{
 
   render(){
     return(
-      <BrowserRouter>
+      <Switch>
+        <Route path="/desktop" component={Desktop} />
+        <Route path="/mobile" component={Mobile} />
         <Route exact path="" component={Login} />
-      </BrowserRouter>
+      </Switch>
     )
   }
 }

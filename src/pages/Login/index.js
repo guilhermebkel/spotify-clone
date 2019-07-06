@@ -43,6 +43,11 @@ export default class Login extends Component{
     }
 
     async login(){
+        this.setState({
+            buttonClass: "button-connect", 
+            buttonText: "Logging in...",
+            loading: {animation: "connecting 2s infinite", pointerEvents: "none"}
+        })
         const API = this.state.server_url + 'login' 
         window.open(API,"_self");
     }
