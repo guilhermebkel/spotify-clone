@@ -2,6 +2,7 @@ export const INITIAL_STATE = {
     device: '',
     token: '',
     name: '',
+    followers: 0,
     avatar_url: '',
     playlists: [],
     tracks: [],

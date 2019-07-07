@@ -24,19 +24,22 @@ class Desktop extends Component{
     }
     
     async componentDidMount(){
+        
+        if(!this.state.token){
+            return this.props.history.push('/', this.props.state.device);
+        }
 
         const userData = await getUserData(this.state.token)
         const userPlaylists = await getUserPlaylists(this.state.token)
         const userTracks = await getUserTracks(this.state.token)
-
         const data = {
-            token: this.state.token,
+            followers: userData.followers.total,
             name: userData.display_name,
-            avatar_url: typeof(userData.images) === 'undefined' ? '' : userData.images[0].url,
+            avatar_url: userData.images[0].url,
             playlists: userPlaylists.items,
             tracks: userTracks.items,
-            song: typeof(userTracks.items) === 'undefined' ? [] : userTracks.items[0],
-            playlist: typeof(userPlaylists.items) === 'undefined' ? [] : userPlaylists.items[0]
+            song: userTracks.items[0],
+            playlist: userPlaylists.items[0]
         }
 
         const changeState = (data) => ({ type: 'GET_INITIAL_DATA', data })

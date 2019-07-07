@@ -7,7 +7,7 @@ export default function reducer(state = INITIAL_STATE, action){
         case('GET_INITIAL_DATA'):
             return {
                 ...state, 
-                token: action.data.token,
+                followers: action.data.followers,
                 name: action.data.name, 
                 avatar_url: action.data.avatar_url, 
                 playlists: action.data.playlists, 
