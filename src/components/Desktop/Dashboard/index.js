@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Navbar from '../Navbar/index'
 import List from '../List/index'
+import Profile from '../Profile/index'
 
 import './style.css'
 
@@ -17,11 +19,15 @@ class Dashboard extends Component{
             <>
                 <div className="dashboard">
                     <Navbar />    
-                    <List />
+                    {
+                        this.props.state.type === 'profile'
+                        ? <Profile />
+                        : <List />
+                    }   
                 </div>
             </>
         )
     }
 }
 
-export default Dashboard
+export default connect(state => ({ state }))(Dashboard)

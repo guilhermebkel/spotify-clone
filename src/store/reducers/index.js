@@ -61,6 +61,13 @@ export default function reducer(state = INITIAL_STATE, action){
                     total_songs: action.data.playlist.total_songs
                 }
             }
+
+        case('GET_PROFILE'):
+            return {
+                ...state,
+                selector: action.data.selectior,
+                type: action.data.type
+            }
             
         default:
             return state

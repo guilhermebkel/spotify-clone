@@ -9,10 +9,6 @@ import DownArrow from '../../../assets/icons/down-arrow.png'
 
 const options = [
     {
-      value: 'account',
-      label: 'Account',
-    },
-    {
       value: 'logout',
       label: 'Log out',
     },
@@ -37,11 +33,22 @@ class Navbar extends Component{
         }
     };
 
+    profile = () => {
+
+        const data = {
+            selector: '',
+            type: 'profile'
+        }
+
+        const getProfile = (data) => ({ type: 'GET_PROFILE', data })
+        this.props.dispatch(getProfile(data))
+    }
+
     render(){
         return (
             <div className="navbar">
                 <img className="avatar" alt="avatar" src={this.props.state.avatar_url} />
-                <h1 className="name">{this.props.state.name}</h1>
+                <h1 className="name" onClick={() => this.profile()}>{this.props.state.name}</h1>
                 <Cascader 
                 options={options} 
                 onChange={this.handleOption} 
