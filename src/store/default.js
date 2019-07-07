@@ -1,4 +1,5 @@
 export const INITIAL_STATE = {
+    device: '',
     token: '',
     name: '',
     avatar_url: '',

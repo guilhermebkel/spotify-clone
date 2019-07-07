@@ -68,6 +68,13 @@ export default function reducer(state = INITIAL_STATE, action){
                 selector: action.data.selectior,
                 type: action.data.type
             }
+        
+        case('SAVE_INFO'):
+        return {
+            ...state,
+            device: action.data.device,
+            token: action.data.access_token
+        }
             
         default:
             return state
