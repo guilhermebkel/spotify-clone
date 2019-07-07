@@ -58,6 +58,27 @@ function reducer(state = INITIAL_STATE, action){
             },
         }
     }
+    else if(action.type === 'CHANGE_LIBRARY'){
+        return {
+            ...state,
+            selector: action.data.selector,
+            type: action.data.type
+        }
+    }
+    else if(action.type === 'CHANGE_PLAYLIST'){
+        return {
+            ...state,
+            selector: action.data.selector,
+            type: action.data.type,
+            playlist: {
+                info: action.data.playlist.info,
+                cover_url: action.data.playlist.cover_url,
+                created_by: action.data.playlist.created_by,
+                name: action.data.playlist.name,
+                total_songs: action.data.playlist.total_songs
+            }
+        }
+    }
     return state 
 }
 
