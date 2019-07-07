@@ -43,7 +43,7 @@ const columns = [
 ];
 
 const table = css({
-    width: "85vw"
+    width: "85vw",
 });
 
 const Library = ({ state, dispatch }) => (
