@@ -25,7 +25,6 @@ const INITIAL_STATE = {
 
 function reducer(state = INITIAL_STATE, action){
     if(action.type === 'GET_INITIAL_DATA'){
-        console.log(action)
         return {
             ...state, 
             name: action.data.name, 
@@ -45,6 +44,18 @@ function reducer(state = INITIAL_STATE, action){
                 name: action.data.playlist.name,
                 total_songs: action.data.playlist.tracks.total
             }
+        }
+    }
+    else if(action.type === 'PLAY_SONG'){
+        return {
+            ...state,
+            isPlaying: action.data.isPlaying,
+            song: {
+                info: action.data.song.info,
+                cover_url: action.data.song.cover_url,
+                artist: action.data.song.artist,
+                name: action.data.song.name
+            },
         }
     }
     return state 

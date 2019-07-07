@@ -38,13 +38,7 @@ class Desktop extends Component{
             playlist: typeof(userPlaylists.items) === 'undefined' ? [] : userPlaylists.items[0]
         }
 
-        function changeState(data){
-            return {
-                type: 'GET_INITIAL_DATA',
-                data
-            }
-        }
-
+        const changeState = (data) => ({ type: 'GET_INITIAL_DATA', data })
         this.props.dispatch(changeState(data))
         this.setState({
             desktopDisplay: {display: "block"},
