@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     avatar_url: '',
     playlists: [],
     tracks: [],
-    selector: 'Songs',
+    selector: 'songs',
     isPlaying: false,
     song: {
         info: [],
