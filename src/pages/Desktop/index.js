@@ -34,7 +34,8 @@ class Desktop extends Component{
             avatar_url: typeof(userData.images) === 'undefined' ? '' : userData.images[0].url,
             playlists: userPlaylists.items,
             tracks: userTracks.items,
-            song: typeof(userTracks.items) === 'undefined' ? [] : userTracks.items[0]
+            song: typeof(userTracks.items) === 'undefined' ? [] : userTracks.items[0],
+            playlist: typeof(userPlaylists.items) === 'undefined' ? [] : userPlaylists.items[0]
         }
 
         function changeState(data){

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Navbar from '../Navbar/index'
-import Library from '../Library/index'
+import List from '../List/index'
 
 import './style.css'
 
@@ -17,7 +17,7 @@ class Dashboard extends Component{
             <>
                 <div className="dashboard">
                     <Navbar />    
-                    <Library />
+                    <List />
                 </div>
             </>
         )
