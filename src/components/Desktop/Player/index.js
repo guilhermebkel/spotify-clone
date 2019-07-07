@@ -20,6 +20,9 @@ class Player extends Component{
                         <ul className="song-artist">{this.props.state.song.artist}</ul>
                     </li>
                 </section>
+                <section className="song-player">
+                
+                </section>
             </div>
         )
     }
