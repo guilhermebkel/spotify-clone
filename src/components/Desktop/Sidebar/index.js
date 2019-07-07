@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { getUserPlaylistSongs }  from '../../../services/spotify'
+
 import './style.css'
 import Home from '../../../assets/icons/home-black-shape.png'
 
@@ -21,11 +23,12 @@ class Sidebar extends Component{
         this.props.dispatch(changeLibrary(data))
     }
 
-    playlist = (selector, playlist) => {
+    playlist = async (selector, playlist) => {
+        const tracks = await getUserPlaylistSongs(this.props.state.token, playlist.id)
         const data = {
             selector,
             type: 'playlist',
-            tracks: [],
+            tracks: tracks.items,
             playlist: {
                 info: playlist,
                 cover_url: playlist.images[0].url,

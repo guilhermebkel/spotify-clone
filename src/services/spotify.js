@@ -27,3 +27,13 @@ export async function getUserPlaylists(token){
                     .catch(error => console.error(error))
     return userPlaylists
 }
+
+export async function getUserPlaylistSongs(token, playlist_id){
+    const userPlaylists = await fetch(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`, {
+                            headers: {'Authorization': 'Bearer ' + token}
+                        })
+                    .then(response => response.json())
+                    .then(data => data)
+                    .catch(error => console.error(error))
+    return userPlaylists
+}

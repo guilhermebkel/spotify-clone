@@ -1,6 +1,7 @@
 import { createStore } from 'redux'
 
 const INITIAL_STATE = {
+    token: '',
     name: '',
     avatar_url: '',
     playlists: [],
@@ -27,6 +28,7 @@ function reducer(state = INITIAL_STATE, action){
     if(action.type === 'GET_INITIAL_DATA'){
         return {
             ...state, 
+            token: action.data.token,
             name: action.data.name, 
             avatar_url: action.data.avatar_url, 
             playlists: action.data.playlists, 
@@ -68,6 +70,7 @@ function reducer(state = INITIAL_STATE, action){
     else if(action.type === 'CHANGE_PLAYLIST'){
         return {
             ...state,
+            tracks: action.data.tracks,
             selector: action.data.selector,
             type: action.data.type,
             playlist: {

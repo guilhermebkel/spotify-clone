@@ -30,6 +30,7 @@ class Desktop extends Component{
         const userTracks = await getUserTracks(this.state.token)
 
         const data = {
+            token: this.state.token,
             name: userData.display_name,
             avatar_url: typeof(userData.images) === 'undefined' ? '' : userData.images[0].url,
             playlists: userPlaylists.items,
