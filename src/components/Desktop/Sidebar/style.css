@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: row;
     opacity: 0.6;
+    margin-left: 20px;
     margin-bottom: 30px;
     margin-top: 20px;
 }
@@ -62,7 +63,6 @@
     width: 25px;
     height: 25px;
     margin: 0px;
-    margin-left: 20px;
     padding: 0px;
 }
 .selector h1 {
@@ -78,4 +78,5 @@
     border-left: 5px solid rgb(24, 214, 94);
     margin-left: 0;
     padding-left: 15px;
+    opacity: 1;
 }
