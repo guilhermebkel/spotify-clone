@@ -21,11 +21,19 @@
     width: 110px;
     border-radius: 30px;
     margin-bottom: 20px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 .play-button:hover {
     background-color: rgb(24, 214, 94);
     color: white;
     width: 120px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .table{
