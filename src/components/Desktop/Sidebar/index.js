@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getUserPlaylistSongs }  from '../../../services/spotify'
+import { getUserPlaylistSongs, getUserTracks }  from '../../../services/spotify'
 
 import './style.css'
 import Home from '../../../assets/icons/home-black-shape.png'
@@ -14,9 +14,11 @@ class Sidebar extends Component{
         }
     }
 
-    library = (selector) => {
+    library = async (selector) => {
+        const tracks = await getUserTracks(this.props.state.token)
         const data = {
             selector,
+            tracks: tracks.items,
             type: 'library'
         }
         const changeLibrary = (data) => ({ type: 'CHANGE_LIBRARY', data })

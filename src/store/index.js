@@ -63,6 +63,7 @@ function reducer(state = INITIAL_STATE, action){
     else if(action.type === 'CHANGE_LIBRARY'){
         return {
             ...state,
+            tracks: action.data.tracks,
             selector: action.data.selector,
             type: action.data.type
         }
