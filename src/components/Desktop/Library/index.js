@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Table } from 'antd'
 import moment from 'moment'
+import { css } from 'emotion'
 
 import PlayButton from '../../../assets/icons/play-button.png'
 import Calendar from '../../../assets/icons/calendar.png'
@@ -19,9 +20,8 @@ const columns = [
         title: () => <span className="columnTitle">TITLE</span>,
         dataIndex: 'track.name',
         key: 'title',
-        isSortColumn: true,
         render: title => <span className="columnData">{title}</span>,
-        className: "column",
+        className: "column"
     },
     {
         title: () => <span className="columnTitle">ARTIST</span>,
@@ -38,15 +38,19 @@ const columns = [
         dataIndex: 'added_at',
         key: 'added_at',
         render: date => <span className="columnData">{moment(date).format("YYYY-MM-DD")}</span>,
-        className: "column",
+        className: "column"
     },
 ];
+
+const table = css({
+    width: "85vw"
+});
 
 const Library = ({ state, dispatch }) => (
     <div className="library">
         <h1 className="title">Songs</h1>
         <button className="play-button">PLAY</button>
-        <Table dataSource={state.tracks.map(song => song)} columns={columns} 
+        <Table className={table} dataSource={state.tracks.map(song => song)} columns={columns} 
         size="small" bordered={false} rowClassName="row"/>
     </div>
 )

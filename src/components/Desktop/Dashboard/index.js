@@ -15,7 +15,7 @@ class Dashboard extends Component{
     render(){
         return (
             <>
-                <div id="dashboard" style={{width: "100%", backgroundColor: "#1E1E1E", height: "87vh"}}>
+                <div class="dashboard">
                     <Navbar />    
                     <Library />
                 </div>
