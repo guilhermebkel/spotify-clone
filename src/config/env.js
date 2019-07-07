@@ -5,10 +5,10 @@ const LOCAL_SERVER = 'http://localhost:5000/'
 const LOCAL_LOGIN = '/'
 
 //const ONLINE_DESKTOP = '/Fake-Spotify/desktop/:token'
-const LOCAL_DESKTOP = '/desktop/:token'
+const LOCAL_DESKTOP = '/desktop'
 
 //const ONLINE_MOBILE = '/Fake-Spotify/mobile/:token'
-const LOCAL_MOBILE = '/mobile/:token'
+const LOCAL_MOBILE = '/mobile'
 
 //const ONLINE_PUBLIC = '/'
 const LOCAL_PUBLIC = ''

@@ -22,7 +22,7 @@ class App extends React.Component{
         <Provider store={store}>
           <Route path={DESKTOP_URL} component={Desktop} />
           <Route path={MOBILE_URL} component={Mobile} />
-          <Route exact path={LOGIN_URL} component={Login} />
+          <Route path={LOGIN_URL} component={Login} />
         </Provider>
       </Switch>
     )

@@ -17,7 +17,7 @@ class Desktop extends Component{
     constructor(props){
         super(props)
         this.state = {
-            token: props.match.params.token,
+            token: this.props.state.token,
             modalDisplay: {display: "flex"},
             desktopDisplay: {display: "none"}
         }

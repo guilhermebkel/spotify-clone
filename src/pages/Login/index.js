@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Particles from 'react-particles-js'
+import queryString from 'query-string'
+
 import { SERVER_URL } from '../../config/env'
 
 import './style.css'
 import Spotify from '../../assets/spotify.png'
 
-export default class Login extends Component{
+class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -19,6 +22,13 @@ export default class Login extends Component{
     }
 
     async componentDidMount(){
+        const values = queryString.parse(this.props.location.search)
+        if(this.props.location.search){
+            const saveInfo = (data) => ({ type: 'SAVE_INFO', data })
+            await this.props.dispatch(saveInfo(values))
+            this.props.history.push(this.props.state.device, '');
+        }
+        
         const server_url = SERVER_URL
         this.setState({
             server_url,
@@ -79,3 +89,5 @@ export default class Login extends Component{
         )
     }
 }
+
+export default connect(state => ({ state }))(Login)
