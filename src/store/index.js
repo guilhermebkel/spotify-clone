@@ -1,6 +1,7 @@
 import { createStore } from 'redux'
 
 const INITIAL_STATE = {
+    token: '',
     name: '',
     avatar_url: '',
     playlists: [],
@@ -25,9 +26,9 @@ const INITIAL_STATE = {
 
 function reducer(state = INITIAL_STATE, action){
     if(action.type === 'GET_INITIAL_DATA'){
-        console.log(action)
         return {
             ...state, 
+            token: action.data.token,
             name: action.data.name, 
             avatar_url: action.data.avatar_url, 
             playlists: action.data.playlists, 
@@ -44,6 +45,41 @@ function reducer(state = INITIAL_STATE, action){
                 created_by: action.data.playlist.owner.display_name,
                 name: action.data.playlist.name,
                 total_songs: action.data.playlist.tracks.total
+            }
+        }
+    }
+    else if(action.type === 'PLAY_SONG'){
+        return {
+            ...state,
+            isPlaying: action.data.isPlaying,
+            song: {
+                info: action.data.song.info,
+                cover_url: action.data.song.cover_url,
+                artist: action.data.song.artist,
+                name: action.data.song.name
+            },
+        }
+    }
+    else if(action.type === 'CHANGE_LIBRARY'){
+        return {
+            ...state,
+            tracks: action.data.tracks,
+            selector: action.data.selector,
+            type: action.data.type
+        }
+    }
+    else if(action.type === 'CHANGE_PLAYLIST'){
+        return {
+            ...state,
+            tracks: action.data.tracks,
+            selector: action.data.selector,
+            type: action.data.type,
+            playlist: {
+                info: action.data.playlist.info,
+                cover_url: action.data.playlist.cover_url,
+                created_by: action.data.playlist.created_by,
+                name: action.data.playlist.name,
+                total_songs: action.data.playlist.total_songs
             }
         }
     }

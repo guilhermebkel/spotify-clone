@@ -30,6 +30,7 @@ class Desktop extends Component{
         const userTracks = await getUserTracks(this.state.token)
 
         const data = {
+            token: this.state.token,
             name: userData.display_name,
             avatar_url: typeof(userData.images) === 'undefined' ? '' : userData.images[0].url,
             playlists: userPlaylists.items,
@@ -38,13 +39,7 @@ class Desktop extends Component{
             playlist: typeof(userPlaylists.items) === 'undefined' ? [] : userPlaylists.items[0]
         }
 
-        function changeState(data){
-            return {
-                type: 'GET_INITIAL_DATA',
-                data
-            }
-        }
-
+        const changeState = (data) => ({ type: 'GET_INITIAL_DATA', data })
         this.props.dispatch(changeState(data))
         this.setState({
             desktopDisplay: {display: "block"},
