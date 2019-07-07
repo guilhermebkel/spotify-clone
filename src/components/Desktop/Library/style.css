@@ -50,6 +50,7 @@
     font-size: 13px; 
     color: #b6b6b6;
     cursor: default;
+    letter-spacing: 2px;
 }
 .columnTitle:hover{
     color: white;

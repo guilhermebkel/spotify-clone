@@ -1,0 +1,81 @@
+.sidebar {
+    width: 100%;
+    background-color: #191919;
+    height: 87vh;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.playlist-title {
+    font-size: 13px; 
+    color: #b6b6b6;
+    cursor: default;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+.playlist-name {
+    font-size: 13px; 
+    color: #b6b6b6;
+    cursor: default;
+    margin-left: 20px;
+    padding-left: 0px;
+}
+.playlist-name:hover {
+    color: white;
+}
+
+.library-title {
+    font-size: 13px; 
+    color: #b6b6b6;
+    cursor: default;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+.library-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+.library-list ul {
+    font-size: 14px;
+    font-weight: bolder; 
+    color: #b6b6b6;
+    cursor: default;
+    margin-left: 20px;
+    padding-left: 0px;
+}
+.library-list ul:hover {
+    color: white;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    opacity: 0.6;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.selector:hover {
+    opacity: 1;
+}
+.selector img {
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    margin-left: 20px;
+    padding: 0px;
+}
+.selector h1 {
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: bolder; 
+    color: white;
+    cursor: default;
+}
+
+#selected {
+    color: white;
+    border-left: 5px solid rgb(24, 214, 94);
+    margin-left: 0;
+    padding-left: 15px;
+}
