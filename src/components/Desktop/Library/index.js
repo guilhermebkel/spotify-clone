@@ -51,7 +51,8 @@ const Library = ({ state, dispatch }) => (
         <h1 className="title">Songs</h1>
         <button className="play-button">PLAY</button>
         <Table className={table} dataSource={state.tracks.map(song => song)} columns={columns} 
-        size="small" bordered={false} rowClassName="row"/>
+        size="small" bordered={false} rowClassName="row" 
+        pagination={{ defaultPageSize: 2000, hideOnSinglePage: true}}/>
     </div>
 )
 

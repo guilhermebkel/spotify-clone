@@ -15,7 +15,7 @@ class Dashboard extends Component{
     render(){
         return (
             <>
-                <div class="dashboard">
+                <div className="dashboard">
                     <Navbar />    
                     <Library />
                 </div>
