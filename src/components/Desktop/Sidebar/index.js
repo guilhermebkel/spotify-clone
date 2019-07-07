@@ -12,11 +12,11 @@ const Sidebar = ({ state }) => (
         </div>
         <h1 className="library-title">YOUR LIBRARY</h1>
         <li className="library-list">
-            <ul id="made-for-you">Made for you</ul>
-            <ul id="recently-played">Recently played</ul>
-            <ul id="songs">Songs</ul>
-            <ul id="albums">Albums</ul>
-            <ul id="artists">Artists</ul>
+            <ul key="made-for-you">Made for you</ul>
+            <ul key="recently-played">Recently played</ul>
+            <ul key="songs" id="selected">Songs</ul>
+            <ul key="albums">Albums</ul>
+            <ul key="artists">Artists</ul>
         </li>
         <h1 className="playlist-title">PLAYLISTS</h1>
         {state.playlists.map(playlist => <ul key={playlist.name} id={playlist.name} className="playlist-name">{playlist.name}</ul>)}
