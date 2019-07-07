@@ -20,9 +20,56 @@
     height: 35px;
     width: 110px;
     border-radius: 30px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 .play-button:hover {
     background-color: rgb(24, 214, 94);
     color: white;
     width: 120px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.table{
+    border-color: transparent !important;
+}
+.row:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    
+}
+.column{
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.columnTitle{
+    font-size: 13px; 
+    color: #b6b6b6;
+    cursor: default;
+}
+.columnTitle:hover{
+    color: white;
+}
+.columnData{
+    font-size: 13px;
+    color: white;
+    cursor: default;
+}
+.play-music{
+    width: 25px;
+    opacity: 0.6;
+}
+.play-music:hover{
+    opacity: 1;
+}
+.calendar{
+    width: 15px;
+    opacity: 0.6;
+}
+.calendar:hover{
+    opacity: 1;
 }
