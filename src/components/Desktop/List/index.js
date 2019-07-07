@@ -67,7 +67,6 @@ class List extends Component{
                 name: track.name,
             }
         }
-        console.log(data)
         const playSong = (data) => ({ type: 'PLAY_SONG', data })
         this.props.dispatch(playSong(data))
     }
