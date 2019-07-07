@@ -4,6 +4,9 @@ import { Table } from 'antd'
 import moment from 'moment'
 import { css } from 'emotion'
 
+import Library from './components/Library'
+import Playlist from './components/Playlist'
+
 import PlayButton from '../../../assets/icons/play-button.png'
 import Calendar from '../../../assets/icons/calendar.png'
 import './style.css'
@@ -46,14 +49,17 @@ const table = css({
     width: "85vw",
 });
 
-const Library = ({ state, dispatch }) => (
-    <div className="library">
-        <h1 className="title">Songs</h1>
-        <button className="play-button">PLAY</button>
+const List = ({ state, dispatch }) => (
+    <div className="list">
+        {
+            state.type === 'playlist'
+            ? <Playlist />
+            : <Library />
+        }
         <Table className={table} dataSource={state.tracks.map(song => song)} columns={columns} 
         size="small" bordered={false} rowClassName="row" 
         pagination={{ defaultPageSize: 2000, hideOnSinglePage: true}}/>
     </div>
 )
 
-export default connect(state => ({ state }))(Library)
+export default connect(state => ({ state }))(List)
