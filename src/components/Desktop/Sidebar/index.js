@@ -19,11 +19,11 @@ const Sidebar = ({ state }) => (
             <ul key="artists" id={state.selector === 'artists' ? 'selected' : ''}>Artists</ul>
         </li>
         <h1 className="playlist-title">PLAYLISTS</h1>
-            {state.playlists.map(playlist => 
-                <ul key={playlist.name} id={state.selector === playlist.nome ? 'selected' : ''} className="playlist-name">
-                    {playlist.name}
-                </ul>
-            )}
+        {state.playlists.map(playlist => 
+            <ul key={playlist.name} id={state.selector === playlist.nome ? 'selected' : ''} className="playlist-name">
+                {playlist.name}
+            </ul>
+        )}
     </div>
 )
 
