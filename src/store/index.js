@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     avatar_url: '',
     playlists: [],
     tracks: [],
-    table_columns: ["TITLE", "ARTITST", "ALBUM", "DATE"]
+    library_selector: 'Songs'
 }
 
 function reducer(state = INITIAL_STATE, action){
