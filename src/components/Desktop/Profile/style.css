@@ -1,7 +1,7 @@
 .profile {
     display: flex;
     flex-direction: row;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 30px;
 }
 .profile .cover {
@@ -33,7 +33,7 @@
 
 .profile-options {
     padding-left: 0px;
-    margin-left: 0px;
+    margin-left: 50px;
     letter-spacing: 2px;
     list-style: none;
     display: flex;
@@ -43,6 +43,10 @@
     color: #b6b6b6;
     cursor: default;
 }
+.profile-options ul {
+    padding-left: 0px;
+    margin-right: 50px;
+}
 .profile-options ul:hover {
     color: white;
 }
@@ -51,5 +55,64 @@
     color: white;
     border-bottom: 2px solid #1ED761;
     padding-left: 0px;
+}
+
+.description {
+    margin-top: 10px;
+    display: flex;
+    padding: 0;
     margin-left: 50px;
+    color: white;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 78vw;
+}
+.description .public-playlists {
+    font-weight: bolder;
+    font-size: 17px;
+    padding-left: 0;
+    cursor: default;
+    flex: 1;
+}
+.description .see-all{
+    font-size: 13px;
+    color: #b6b6b6;
+    letter-spacing: 2px;
+    cursor: default;
+    padding-left: 0px;
+}
+.description .see-all:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.playlists {
+    display: grid;
+    grid-template-columns: 16vw 16vw 16vw 16vw 16vw;
+    margin-left: 50px;
+}
+.playlists .album {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.playlists .album img {
+    width: 180px;
+    height: 180px;
+    padding-left: 0;
+    margin-left: 0;
+}
+.playlists .album img:hover {
+    opacity: 0.7;
+}
+.playlists .album h1 {
+    color: white;
+    cursor: default;
+    font-weight: bolder;
+    margin-top: 5px;
+    font-size: 14px;
+    width: 180px
+}
+.playlists .album h1:hover {
+    border-bottom: 1px solid white;
 }
