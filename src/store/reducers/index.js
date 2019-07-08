@@ -70,11 +70,18 @@ export default function reducer(state = INITIAL_STATE, action){
             }
         
         case('SAVE_INFO'):
-        return {
-            ...state,
-            device: action.data.device,
-            token: action.data.access_token
-        }
+            return {
+                ...state,
+                device: action.data.device,
+                token: action.data.access_token
+            }
+        
+        case('CHANGE_PROFILE_SELECTOR'):
+            return {
+                ...state,
+                profile_selector: action.data.profile_selector,
+                profile_playlists: action.data.profile_playlists
+            }
             
         default:
             return state

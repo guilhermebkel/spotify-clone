@@ -10,7 +10,7 @@ export default class Mobile extends Component{
 
     render(){
         return (
-            <h1>MOBILE</h1>
+            <div />
         )
     }
 }

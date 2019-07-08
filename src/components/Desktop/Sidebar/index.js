@@ -53,16 +53,12 @@ class Sidebar extends Component{
                 </div>
                 <h1 className="library-title">YOUR LIBRARY</h1>
                 <li className="library-list">
-                    <ul onClick={() => this.library('made-for-you')}
-                    id={this.props.state.selector === 'made-for-you' ? 'selected' : ''}>Made for you</ul>
-                    <ul onClick={() => this.library('recently-played')}  
-                    id={this.props.state.selector === 'recently-played' ? 'selected' : ''}>Recently played</ul>
+                    <ul>Made for you</ul>
+                    <ul>Recently played</ul>
                     <ul onClick={() => this.library('songs')}  
                     id={this.props.state.selector === 'songs' ? 'selected' : ''}>Songs</ul>
-                    <ul onClick={() => this.library('albums')}  
-                    id={this.props.state.selector === 'albums' ? 'selected' : ''}>Albums</ul>
-                    <ul onClick={() => this.library('artists')}   
-                    id={this.props.state.selector === 'artists' ? 'selected' : ''}>Artists</ul>
+                    <ul>Albums</ul>
+                    <ul>Artists</ul>
                 </li>
                 <h1 className="playlist-title">PLAYLISTS</h1>
                 {this.props.state.playlists.map(playlist => 
