@@ -18,4 +18,4 @@ export const LOGIN_URL = process.env.NODE_ENV === 'development' ? LOCAL_LOGIN : 
 export const DESKTOP_URL = process.env.NODE_ENV === 'development' ? LOCAL_DESKTOP : LOCAL_DESKTOP
 export const MOBILE_URL = process.env.NODE_ENV === 'development' ? LOCAL_MOBILE : LOCAL_MOBILE
 export const PUBLIC_URL = process.env.NODE_ENV === 'development' ? LOCAL_PUBLIC : LOCAL_PUBLIC
-export const TOKEN = 'BQBOwriRIebpp_XDYCIKeqTKg6dTXKbL3pDi4KNnKkjFc5wAw4LnusnSADp0w8SIBK-MBSOiIonRp3e4pEGP2fEweY1VssfvLg69K9Jdkd-577hFW73WaDlA5vhbVSTRYUSRm-kpat8Dhs6uw0VpREKsqOXFYpvMGj5UhI1JFv07nQ'
+export const TOKEN = ''
