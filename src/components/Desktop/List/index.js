@@ -43,7 +43,7 @@ class List extends Component{
             dataIndex: 'track.artists',
             key: 'artist',
             render: artists => {
-                const artist = [...artists.map(artist => artist.name + ' ')]
+                const artist = [...artists.map(artist => artist.name).join(', ')]
                 return (<span className="columnData">{artist}</span>)
             },
             className: "column",
