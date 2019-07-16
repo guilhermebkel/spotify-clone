@@ -43,7 +43,7 @@ class List extends Component{
             dataIndex: 'track.artists',
             key: 'artist',
             render: artists => {
-                const artist = [...artists.map(artist => artist.name + ' ')]
+                const artist = [...artists.map(artist => artist.name).join(', ')]
                 return (<span className="columnData">{artist}</span>)
             },
             className: "column",
@@ -63,7 +63,7 @@ class List extends Component{
             song: {
                 info: track,
                 cover_url: track.album.images[track.album.images.length-1].url,
-                artist: [...track.artists.map(artist => artist.name)],
+                artist: [...track.artists.map(artist => artist.name).join(', ')],
                 name: track.name,
             }
         }

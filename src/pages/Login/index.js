@@ -23,6 +23,7 @@ class Login extends Component{
 
     async componentDidMount(){
         const values = queryString.parse(this.props.location.search)
+        console.log(process.env.NODE_ENV === 'development' ? values.access_token : '')
         if(this.props.location.search){
             const saveInfo = (data) => ({ type: 'SAVE_INFO', data })
             await this.props.dispatch(saveInfo(values))
