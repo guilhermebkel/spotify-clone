@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-const Library = ({ state }) => (
-    <div className="library">
-        <h1 className="title">Songs</h1>
-        <button className="play-button">PLAY</button>
-    </div>
-)
+class Library extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
+
+    play = () => {
+        const data = {
+            isPlaying: true,
+            song: {
+                info: this.props.state.tracks[0],
+                cover_url: this.props.state.tracks[0].track.album.images[this.props.state.tracks[0].track.album.images.length-1].url,
+                artist: [...this.props.state.tracks[0].track.artists.map(artist => artist.name).join(', ')],
+                name: this.props.state.tracks[0].track.name,
+            }
+        }
+        const playSong = (data) => ({ type: 'PLAY_SONG', data })
+        this.props.dispatch(playSong(data))
+    }
+
+    render(){
+        return(
+            <div className="library">
+                <h1 className="title">Songs</h1>
+                <button className="play-button" onClick={this.play}>PLAY</button>
+            </div>
+        )
+    }
+}
 
 export default connect(state => ({ state }))(Library)
