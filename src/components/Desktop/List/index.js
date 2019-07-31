@@ -13,6 +13,8 @@ import './style.css'
 
 const table = css({
     width: "85vw",
+    borderLeft: "20px solid transparent",
+    borderRight: "20px solid transparent"
 });
 
 class List extends Component{
