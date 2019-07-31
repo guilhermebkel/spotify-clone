@@ -82,6 +82,7 @@
     color: #b6b6b6;
     cursor: default;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 .columnTitle:hover{
     color: white;
@@ -101,6 +102,7 @@
 .calendar{
     width: 15px;
     opacity: 0.6;
+    cursor: pointer;
 }
 .calendar:hover{
     opacity: 1;

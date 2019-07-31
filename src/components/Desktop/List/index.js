@@ -38,7 +38,8 @@ class List extends Component{
             dataIndex: 'track.name',
             key: 'title',
             render: title => <span className="columnData">{title}</span>,
-            className: "column"
+            className: "column",
+            sorter: (a, b) => a.track.name.length - b.track.name.length,
         },
         {
             title: () => <span className="columnTitle">ARTIST</span>,
@@ -49,13 +50,15 @@ class List extends Component{
                 return (<span className="columnData">{artist}</span>)
             },
             className: "column",
+            sorter: (a, b) => [...a.track.artists.map(artist => artist.name).join(', ')].length - [...b.track.artists.map(artist => artist.name).join(', ')].length,
         },
         {
             title: () => <img alt="calendar" src={Calendar} className="calendar"></img>,
             dataIndex: 'added_at',
             key: 'added_at',
             render: date => <span className="columnData">{moment(date).format("YYYY-MM-DD")}</span>,
-            className: "column"
+            className: "column",
+            sorter: (a, b) => (+moment(a.added_at).format("YYYY-MM-DD").replace(/-/g, '')) - (+moment(b.added_at).format("YYYY-MM-DD").replace(/-/g, '')),
         },
     ];
 
