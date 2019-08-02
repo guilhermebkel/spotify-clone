@@ -31,7 +31,7 @@ export default function reducer(state = INITIAL_STATE, action){
         case('PLAY_SONG'):
             return {
                 ...state,
-                isPlaying: action.data.isPlaying,
+                isPlaying: action.data.isPlaying || state.isPlaying,
                 song: {
                     info: action.data.song.info,
                     cover_url: action.data.song.cover_url,
