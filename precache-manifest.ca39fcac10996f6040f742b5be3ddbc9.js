@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8257660453b2f5a4cd2541ac5600802",
+    "revision": "1588c3a62f27e3b3acc1f2568718f999",
     "url": "/Fake-Spotify/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Fake-Spotify/static/css/2.41a373cd.chunk.css"
   },
   {
-    "revision": "14bd050fbd63ec7e9f60",
+    "revision": "2eec27bff16c629587f5",
     "url": "/Fake-Spotify/static/css/main.cc9a86ef.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Fake-Spotify/static/js/2.709b4aca.chunk.js"
   },
   {
-    "revision": "14bd050fbd63ec7e9f60",
-    "url": "/Fake-Spotify/static/js/main.4542f1f6.chunk.js"
+    "revision": "2eec27bff16c629587f5",
+    "url": "/Fake-Spotify/static/js/main.60c76b53.chunk.js"
   },
   {
     "revision": "e44341421727603da8d4",
