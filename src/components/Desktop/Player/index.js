@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { MdVolumeUp, MdVolumeOff } from "react-icons/md"
+
+import Buttons from './widgets/Buttons'
+import ProgressBar from './widgets/ProgressBar'
 
 import './style.css'
 
@@ -8,6 +12,15 @@ class Player extends Component{
         super(props)
         this.state = {
         }
+    }
+
+    mute = () => {
+        const mute = () => ({ type: 'MUTE' })
+        this.props.dispatch(mute())
+    }
+    desmute = () => {
+        const desmute = () => ({ type: 'DESMUTE' })
+        this.props.dispatch(desmute())
     }
 
     render(){
@@ -21,7 +34,20 @@ class Player extends Component{
                     </li>
                 </section>
                 <section className="song-player">
-                
+                    <Buttons />
+                    <ProgressBar />
+                </section>
+                <section className="song-volume">
+                    {
+                        this.props.state.isMuted
+                        ? <MdVolumeOff className="muted-desmuted" onClick={this.desmute} />
+                        : <MdVolumeUp className="muted-desmuted" onClick={this.mute} />
+                    }
+                    <section className="progress-bar-container">
+                        <div className="progress-bar">
+                            <div style={{width: `${this.props.state.isMuted ? 0 : this.props.state.volume}%`}}></div>
+                        </div>
+                    </section>
                 </section>
             </div>
         )
