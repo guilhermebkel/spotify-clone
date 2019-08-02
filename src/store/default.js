@@ -14,11 +14,13 @@ export const INITIAL_STATE = {
     selector: 'songs',
     type: 'library',
     isPlaying: false,
+    isMuted: false,
     song: {
         info: [],
         cover_url: '',
         artist: '',
         name: '',
+        duration_ms: 0,
     },
     playlist: {
         info: [],
