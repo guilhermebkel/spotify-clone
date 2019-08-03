@@ -11,7 +11,16 @@ class Player extends Component{
     constructor(props){
         super(props)
         this.state = {
+            songDuration: 0,
+            currentTime: 0,
+            currentTimeMilliseconds: 0,
+            songState: 0,
         }
+    }
+
+    componentDidMount(){
+        this.setState({ currentTime: this.millisToMinutesAndSeconds(this.state.currentTimeMilliseconds) })
+        this.refreshState()
     }
 
     mute = () => {
@@ -21,6 +30,37 @@ class Player extends Component{
     desmute = () => {
         const desmute = () => ({ type: 'DESMUTE' })
         this.props.dispatch(desmute())
+    }
+
+    refreshState = (changeSong = false) => {
+        this.setState({ songDuration: this.millisToMinutesAndSeconds(this.props.state.song.duration_ms) })
+
+        if(changeSong){
+            this.setState({ currentTime: this.millisToMinutesAndSeconds(0), songState: 0, currentTimeMilliseconds: 0 })
+        }
+        
+        if (this.props.state.isPlaying) this.play()
+    }
+
+    millisToMinutesAndSeconds(millis) {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    play(){
+        const playing = setInterval(() => {
+            this.setState({
+                currentTime: this.millisToMinutesAndSeconds(this.state.currentTimeMilliseconds),
+                currentTimeMilliseconds: this.state.currentTimeMilliseconds + 1000,
+                songState: ((this.state.currentTimeMilliseconds + 1000) / this.props.state.song.duration_ms)*100,
+            })
+            if (!this.props.state.isPlaying) this.pause(playing)
+        }, 1000)
+    }
+
+    pause(state){
+        clearInterval(state)
     }
 
     render(){
@@ -34,8 +74,8 @@ class Player extends Component{
                     </li>
                 </section>
                 <section className="song-player">
-                    <Buttons />
-                    <ProgressBar />
+                    <Buttons refreshState={this.refreshState} />
+                    <ProgressBar {...this.state} />
                 </section>
                 <section className="song-volume">
                     {
