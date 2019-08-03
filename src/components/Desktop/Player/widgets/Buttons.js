@@ -10,15 +10,17 @@ class Buttons extends Component{
         this.state = {}
     }
 
-    play = () => {
+    play = async () => {
         const playSong = () => ({ type: 'PLAY' })
-        this.props.dispatch(playSong())
+        await this.props.dispatch(playSong())
+        this.props.refreshState()
     }
-    pause = () => {
-        const playSong = () => ({ type: 'PAUSE' })
-        this.props.dispatch(playSong())
+    pause = async () => {
+        const pauseSong = () => ({ type: 'PAUSE' })
+        await this.props.dispatch(pauseSong())
+        this.props.refreshState()
     }
-    changeSong = (type) => {
+    changeSong = async (type) => {
         let nextSong = [] 
         for(let i=0; i<this.props.state.tracks.length; i++){
             if(this.props.state.tracks[i].track.name === this.props.state.song.name){
@@ -46,7 +48,8 @@ class Buttons extends Component{
             }
         }
         const playSong = (data) => ({ type: 'PLAY_SONG', data })
-        this.props.dispatch(playSong(data))
+        await this.props.dispatch(playSong(data))
+        this.props.refreshState(true)
     }
 
     render(){
