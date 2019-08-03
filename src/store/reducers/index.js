@@ -17,7 +17,8 @@ export default function reducer(state = INITIAL_STATE, action){
                     cover_url: action.data.song.track.album.images[action.data.song.track.album.images.length-1].url,
                     artist: [...action.data.song.track.artists.map(artist => artist.name).join(', ')],
                     name: action.data.song.track.name,
-                    duration_ms: action.data.song.track.duration_ms
+                    duration_ms: action.data.song.track.duration_ms,
+                    url: action.data.song.track.external_urls.spotify
                 },
                 playlist: {
                     info: action.data.playlist,
@@ -37,7 +38,8 @@ export default function reducer(state = INITIAL_STATE, action){
                     cover_url: action.data.song.cover_url,
                     artist: action.data.song.artist,
                     name: action.data.song.name,
-                    duration_ms: action.data.song.duration_ms
+                    duration_ms: action.data.song.duration_ms,
+                    url: action.data.song.url
                 },
             }
 

@@ -21,6 +21,7 @@ export const INITIAL_STATE = {
         artist: '',
         name: '',
         duration_ms: 0,
+        url: ''
     },
     playlist: {
         info: [],

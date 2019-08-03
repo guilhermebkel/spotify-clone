@@ -34,6 +34,7 @@ class Player extends Component{
     }
 
     refreshState = (changeSong = false) => {
+        console.log(this.props.state.song.url)
         this.setState({ songDuration: this.millisToMinutesAndSeconds(this.props.state.song.duration_ms) })
 
         if(changeSong){
@@ -89,7 +90,8 @@ class Player extends Component{
                 cover_url: nextSong[0].album.images[this.props.state.tracks[0].track.album.images.length-1].url,
                 artist: [...nextSong[0].artists.map(artist => artist.name).join(', ')],
                 name: nextSong[0].name,
-                duration_ms: nextSong[0].duration_ms
+                duration_ms: nextSong[0].duration_ms,
+                url: nextSong[0].external_urls.spotify
             }
         }
         const playSong = (data) => ({ type: 'PLAY_SONG', data })

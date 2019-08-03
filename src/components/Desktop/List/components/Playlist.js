@@ -28,7 +28,8 @@ class Playlist extends Component {
                 cover_url: this.props.state.tracks[0].track.album.images[this.props.state.tracks[0].track.album.images.length-1].url,
                 artist: [...this.props.state.tracks[0].track.artists.map(artist => artist.name).join(', ')],
                 name: this.props.state.tracks[0].track.name,
-                duration_ms: this.props.state.tracks[0].track.duration_ms
+                duration_ms: this.props.state.tracks[0].track.duration_ms,
+                url: this.props.state.tracks[0].track.external_urls.spotify
             }
         }
         const playSong = (data) => ({ type: 'PLAY_SONG', data })

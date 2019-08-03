@@ -70,7 +70,8 @@ class List extends Component{
                 cover_url: track.album.images[track.album.images.length-1].url,
                 artist: [...track.artists.map(artist => artist.name).join(', ')],
                 name: track.name,
-                duration_ms: track.duration_ms
+                duration_ms: track.duration_ms,
+                url: track.external_urls.spotify
             }
         }
         const playSong = (data) => ({ type: 'PLAY_SONG', data })
