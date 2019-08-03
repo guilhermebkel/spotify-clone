@@ -58,11 +58,18 @@ export default function reducer(state = INITIAL_STATE, action){
                 ...state,
                 isMuted: true,
             }
+
         case('DESMUTE'):
             return {
                 ...state,
                 isMuted: false,
             }
+
+        case('CHANGE_VOLUME'):
+            return {
+                ...state,
+                volume: action.data.volume,
+            }    
 
         case('CHANGE_LIBRARY'):
             return {
