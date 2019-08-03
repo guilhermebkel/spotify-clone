@@ -22,8 +22,18 @@ class Buttons extends Component{
         let nextSong = [] 
         for(let i=0; i<this.props.state.tracks.length; i++){
             if(this.props.state.tracks[i].track.name === this.props.state.song.name){
-                nextSong.push(this.props.state.tracks[type === 'next' ? ++i : --i].track)
-                break
+                if(i === this.props.state.tracks.length-1){
+                    nextSong.push(this.props.state.tracks[type === 'next' ? 0 : --i].track) 
+                    break
+                }
+                else if(i === 0){
+                    nextSong.push(this.props.state.tracks[type === 'previous' ? this.props.state.tracks.length-1 : ++i].track)
+                    break
+                }
+                else{
+                    nextSong.push(this.props.state.tracks[type === 'next' ? ++i : --i].track)
+                    break
+                }
             }
         }
         const data = {
