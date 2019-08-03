@@ -34,7 +34,6 @@ class Player extends Component{
     }
 
     refreshState = (changeSong = false) => {
-        console.log(this.props.state.song.url)
         this.setState({ songDuration: this.millisToMinutesAndSeconds(this.props.state.song.duration_ms) })
 
         if(changeSong){
