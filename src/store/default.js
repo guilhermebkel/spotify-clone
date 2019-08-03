@@ -1,7 +1,7 @@
 import { TOKEN } from '../config/env'
 
 export const INITIAL_STATE = {
-    volume: 100,
+    volume: 80,
     device: '',
     token: TOKEN || '',
     name: '',
@@ -21,6 +21,7 @@ export const INITIAL_STATE = {
         artist: '',
         name: '',
         duration_ms: 0,
+        url: ''
     },
     playlist: {
         info: [],

@@ -64,34 +64,64 @@
     display: flex;
     align-items: center;
 }
-
 .player .progress-bar-container {
     margin: 0 auto auto auto;
     display: flex;
     align-items: center;
 }
-
 .player .progress-bar-container span {
     padding: 0 10px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
 }
-
-.player .progress-bar-container .progress-bar {
+.progress-bar-container .ant-slider {
     width: 37vw;
-    height: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    margin: auto 15px auto 10px;
+}
+.progress-bar-container .ant-slider .ant-slider-track {
+    background-color: white;
+}
+.progress-bar-container .ant-slider:hover .ant-slider-track {
+    background-color: #1ED761;
+}
+.progress-bar-container .ant-slider .ant-slider-handle {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 1);
+    display: none;
+}
+.progress-bar-container .ant-slider:hover .ant-slider-handle {
     display: block;
 }
-
-.player .progress-bar-container .progress-bar div {
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    border-radius: 5px;
+.progress-bar-container .ant-slider .ant-slider-handle:focus {
+    box-shadow: 0 0 0 5px rgba(0, 255, 94, 0);
 }
-.player .progress-bar-container .progress-bar div:hover {
-    background-color: rgb(24, 214, 94);
+.progress-bar-container .ant-slider .ant-slider-rail {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.song-volume .ant-slider {
+    width: 100px;
+    margin: auto 15px auto 10px;
+}
+.song-volume .ant-slider .ant-slider-track {
+    background-color: white;
+}
+.song-volume .ant-slider:hover .ant-slider-track {
+    background-color: #1ED761;
+}
+.song-volume .ant-slider .ant-slider-handle {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 1);
+    display: none;
+}
+.song-volume .ant-slider:hover .ant-slider-handle {
+    display: block;
+}
+.song-volume .ant-slider .ant-slider-handle:focus {
+    box-shadow: 0 0 0 5px rgba(0, 255, 94, 0);
+}
+.song-volume .ant-slider .ant-slider-rail {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .player .play-pause {
@@ -126,16 +156,4 @@
 }
 .song-volume .muted-desmuted:hover {
     color: rgba(255, 255, 255, 1);
-}
-
-.song-volume .progress-bar-container {
-    margin: auto 15px auto 10px;
-    display: flex;
-}
-.song-volume .progress-bar-container .progress-bar {
-    width: 100px;
-    height: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    display: block;
 }
