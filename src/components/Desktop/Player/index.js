@@ -56,7 +56,7 @@ class Player extends Component{
                 currentTimeMilliseconds: this.state.currentTimeMilliseconds + 1000,
                 songState: ((this.state.currentTimeMilliseconds + 1000) / this.props.state.song.duration_ms)*100,
             })
-            if (this.state.currentTimeMilliseconds > this.props.state.song.duration_ms) this.changeSong('next')
+            if (this.state.currentTimeMilliseconds > this.props.state.song.duration_ms) this.changeSong('next') && this.pause(playing) && this.play()
             if (!this.props.state.isPlaying) this.pause(playing)
         }, 1000)
     }
