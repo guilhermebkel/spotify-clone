@@ -1,5 +1,10 @@
 # Fake-Spotify
-A spotify version made by me using their own API in order to fetch data.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/guilhermebkel/guilhermebkel.github.io/blob/master/src/resources/mockup/fakespotify.jpg?raw=true">
+</p>
+<p align="center">
+  A spotify version made by me using their own API in order to fetch data.
+</p>
 
 ### Environmental
 The following configurations must be in the root `.env`
